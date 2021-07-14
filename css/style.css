@@ -1,0 +1,300 @@
+/*--------------------------
+Utilities & Global Styles
+--------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    padding: 0 10%;
+}
+
+
+
+
+
+/*--------------------------
+Navigation-Bar Styles
+--------------------------*/
+#nav-section{
+    background: #2D25A0;
+    padding: 40px 0;
+}
+nav{
+    background: #2D25A0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+#navigation a{
+    color: white;
+    padding-right: 30px;
+}
+
+
+/*------- Animation ---------*/
+.ball img{
+    max-width: 75px;
+}
+.ball{
+    position: relative;
+    transition: transform 2s ease-out 0.33s;
+}
+
+#showcase:hover .ball {
+    transform: translate(-570px, 100px);
+}
+/*--------------------------
+Showcase Section Styles
+--------------------------*/
+#showcase{
+    padding-top: 10px;
+    padding-bottom: 85px;
+    background: #2D25A0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.showcase-box{
+    width: 45%;
+}
+.showcase-box h1{
+    font-size: 64px;
+    line-height: 80px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.btn{
+    width: 170px;
+    height: 45px;
+    padding: 10px 25px ;
+    background: #E02C6D;
+    color: white;
+    font-size: 16px;
+}
+.showcase-box img{
+    width: 100%;
+}
+
+
+
+
+
+/*--------------------------
+Players Section Styles
+--------------------------*/
+#players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding-top: 70px;
+}
+.player-card{
+    padding: 15px;
+    box-shadow: 0px 0px 40px hsla(0, 0%, 0%, 0.15);
+}
+.player-card img{
+    width: 100%;
+}
+.player-card h2{
+    font-size: 28px;
+    margin: 16px 0 10px 0;
+}
+.player-card p{
+    color: #6C6C6C;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+
+
+
+
+/*--------------------------
+Highlights Section Styles
+--------------------------*/
+#highlight{
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+#highlight-txt{
+    padding-top: 0px;
+    padding-right: 10%;
+}
+.highlight-box h1{
+    font-size: 30px;
+}
+.highlight-box h3{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.highlight-box p{
+    color: #6C6C6C;
+    font-size: 13px;
+    font-weight: 400px;
+    margin: 20px 0 50px 0;
+}
+
+
+
+
+
+/*--------------------------
+Sponsor Section Styles
+--------------------------*/
+#sponsors{
+    width: 80%;
+    margin: 80px auto;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 40px hsla(0, 0%, 0%, 0.15);
+    opacity: .5;
+}
+#sponsors h1{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin: 30px 0;
+}
+#sponsor-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 20px;
+}
+.sponsor-box img{
+    width: 70%;
+    margin: 30px 15%;
+}
+
+
+
+
+
+/*--------------------------
+Footer Section Styles
+--------------------------*/
+footer{
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0px 0px 40px hsla(0, 0%, 0%, 0.15);
+}
+.foo-box{
+    margin: 0px auto 0 auto;
+    width: 30%;
+}
+.foo-box img{
+    width: 100%;
+}
+.foo-box i{
+    background: hsla(230, 35%, 7%, 0.1);
+    color: #969BAB;
+    height: 32px;
+    width: 32px;
+    font-size: 17px;
+    padding: 7px;
+    margin: 0 7px 10px 7px;
+    border-radius: 16px;
+}
+.foo-box p{
+    font-size: 18px;
+}
+
+
+
+
+
+
+/*----------------------------
+------------------------------
+Responsive Styles For Tablets
+------------------------------
+----------------------------*/
+@media only screen and (max-width: 992px){
+
+    /*navigation section*/
+    #nav-section{
+        display: none;
+    }
+
+    /* showcase section  */
+    #showcase{
+        flex-direction: column;
+    }
+    .showcase-box{
+        width: 100%;
+    }
+    .showcase-box img{
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    /* players section  */
+    #players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* highlight section  */
+    #highlight{
+        flex-direction: column;
+        align-items: center;
+    }
+    .highlight-box{
+        width: 100%;
+        padding: 25px 0;
+    }
+}
+
+
+
+
+
+/*----------------------------
+------------------------------
+Responsive Styles For Mobiles
+------------------------------
+----------------------------*/
+@media only screen and (max-width: 688px){
+
+    /* showcase section  */
+    .showcase-box h1{
+        font-size: 40px;
+    }
+
+    /* players section  */
+    #players{
+        grid-template-columns: 1fr;
+    }
+
+    /* highlight section  */
+    iframe{
+        width: 320px;
+        height: 180px;
+    }
+
+    /* sponsors section  */
+    #sponsors h1{
+        font-size: 15px;
+    }
+
+    /* footer section  */
+    .foo-box{
+        width: 55%;
+    }
+    .foo-box i{
+        font-size: 18px;
+        padding: 6px;
+        margin: 7px;
+    }
+}
